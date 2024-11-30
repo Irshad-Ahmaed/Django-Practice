@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %} All Chais {% endblock %}
+
+{% block content %}
+<h1 class='text-center text-white'>Chai Detail Page</h1>
+<div class='p-5 w-fit rounded-lg m-5 hover:shadow-orange-400 shadow-md bg-orange-400 cursor-pointer'>
+
+    <img src={{chai.image.url}} alt={{chai.name}} class='w-96 rounded-lg' />
+    <h1 class='text-gray-800'>{{chai.name}}</h1>
+    <h1 class='text-gray-800 font-bold underline'>Description:</h1>
+    <h1 class='text-white'>{{chai.description}}</h1>
+    
+</div>
+{% endblock %}
