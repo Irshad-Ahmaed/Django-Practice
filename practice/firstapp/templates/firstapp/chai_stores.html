@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %} Django Forms {% endblock %}
+
+{% block content %}
+Django Forms:
+<form method='POST'>
+    {% csrf_token %}
+    {{form}}
+    <button class='mx-10 my-3 bg-orange-500 p-2 rounded-lg text-white focus:bg-orange-600' type='submit'>Search Chai Store</button>
+</form>
+
+{% if stores %}
+<h2>Stores available: </h2>
+
+<ul class='mx-5'>
+    {% for store in stores %}
+    <li class='text-white'>{{store.id}}. {{ store.name }} - {{ store.location }}</li>
+    {% endfor %}
+</ul>
+
+{% endif %}
+{% endblock %}
